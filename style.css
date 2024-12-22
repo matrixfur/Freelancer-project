@@ -3,6 +3,8 @@ body{
     background-size: cover; /* Makes the background image cover the entire page */
     background-repeat: no-repeat;
     overflow-y: hidden;
+    width: 100vw;
+    height: 100vh;
     overflow-x: hidden;
     color:white;
 }
@@ -15,5 +17,61 @@ img{
     width:900px;
 }
 
+#container-1{
+    
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height:40vh;
+    width:60vh;
+    background-color: transparent;
+    position: relative;
+    left: 150px;
+    top: 220px;
+}
 
+#title{
+    position:relative;
+    font-family: "Montserrat" ;
+    font-size: 55px;
+    text-align: center;
+}
+
+#moto{
+    position: relative;
+    bottom: 30px;
+    font-family: "raleway";
+    text-align: center;
+}
+
+#redirector {
+    background: linear-gradient(135deg, #ffadad, #ffd6a5); /* Soft gradient colors */
+    border: none;
+    border-radius: 25px;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+  /* Hover Effect */
+#redirector:hover {
+    background: linear-gradient(135deg, #ffd6a5, #ffadad); /* Reverse gradient */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+#redirector:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 173, 173, 0.5); /* Soft focus ring */
+}
+
+#redirector:active {
+    transform: translateY(2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
 
