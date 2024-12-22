@@ -1,0 +1,16 @@
+body{
+    background-image: url('./resources/back.png');
+    background-size: cover; /* Makes the background image cover the entire page */
+    background-repeat: no-repeat;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+img{
+    position:relative;
+    right:100px;
+    top:10px;
+    height:500px;
+    width:900px;
+}
+
