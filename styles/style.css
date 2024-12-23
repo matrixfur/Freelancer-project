@@ -1,6 +1,6 @@
 body{
-    background-image: url('./resources/mainbackground.png');
-    background-size: cover; /* Makes the background image cover the entire page */
+    background-image: url('../resources/mainbackground.png');
+    background-size: cover; 
     background-repeat: no-repeat;
     overflow-y: hidden;
     width: 100vw;

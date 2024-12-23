@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QnA Dashboard</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('../resources/dashback.png');
+            background-size: cover; 
+            background-repeat: no-repeat;
+            overflow-y: hidden;
+            color: #2c3e50; /* Neutral dark gray for text */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 28px;
+            color: white;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .user-info img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .user-info .name {
+            font-size: 16px;
+            color: white;
+        }
+
+        .tasks-section {
+            display: flex;
+            gap: 20px;
+        }
+
+        .tasks {
+            flex: 3;
+            background: #fffaf0; /* Soft ivory background */
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            height: 400px;
+        }
+
+        .tasks h2 {
+            font-size: 22px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .task {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f5e9d7; /* Light pastel beige */
+            border-radius: 8px;
+            margin-bottom: 15px;
+            padding: 15px 20px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .task .details {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .task h3 {
+            font-size: 16px;
+            color: #2c3e50;
+            margin: 0;
+        }
+
+        .task p {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin: 5px 0 0 0;
+        }
+
+        .task button {
+            background-color: #eaf4fc; /* Pastel blue */
+            color: #2c3e50; /* Dark text for contrast */
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        .task button:hover {
+            background-color: #d4e9f9; /* Slightly darker pastel blue */
+        }
+
+        .monitoring {
+            flex: 2;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .monitoring h2 {
+            font-size: 22px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .chart {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .chart-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-top: 10px;
+        }
+
+        .chart canvas {
+            max-width: 200px;
+        }
+
+        .counseling {
+            background: #fff;
+            opacity: 0.7;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            margin-top: 20px;
+            width: 97.5%;
+            text-align: center;
+        }
+
+        .counseling p {
+            font-size: 14px;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .counseling button {
+            background-color: #ff6f61; /* Coral red */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        .counseling button:hover {
+            background-color: #e65c50; /* Slightly darker coral */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="title">Assessment Dashboard</h1>
+            <div class="user-info">
+                <img src="../resources/icon.png" alt="User">
+                <div class="name">Alison Swart</div>
+            </div>
+        </header>
+
+        <div class="tasks-section">
+            <div class="tasks">
+                <h2>Questions</h2>
+                <div class="task">
+                    <div class="details">
+                        <h3>Personality Test</h3>
+                        <p>Test your personality by answering the questions.</p>
+                    </div>
+                    <a href="./personality.html"><button>Take Test</button></a>
+                </div>
+                <div class="task">
+                    <div class="details">
+                        <h3>Emotion Test</h3>
+                        <p>Test your emotional level by taking this test.</p>
+                    </div>
+                    <a href="./emotion.html"><button>Take Test</button></a>
+                </div>
+                <div class="task">
+                    <div class="details">
+                        <h3>Interest Test</h3>
+                        <p>Test your interest level by answering a few of our questions.</p>
+                    </div>
+                    <a href="./interest.html"><button>Take Test</button></a>
+                </div>
+                <div class="task">
+                    <div class="details">
+                        <h3>Stress Test</h3>
+                        <p>Know your stress level by taking our stress-handling test.</p>
+                    </div>
+                    <a href="./stress.html"><button>Take Test</button></a>
+                </div>
+            </div>
+
+            <div class="monitoring">
+                <h2>Result Monitoring</h2>
+                <div class="chart">
+                    <canvas id="personalityChart"></canvas>
+                    <div class="chart-title">Personality Test Analysis</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="counseling">
+            <p>Book a counseling session to improve your performance.</p>
+            <button  onClick="goToPage('appoinment.html')">Book Now</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('personalityChart').getContext('2d');
+
+        const personalityChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Completed', 'Remaining'],
+                datasets: [{
+                    data: [50, 50],
+                    backgroundColor: ['#87ceeb', '#e0e0e0']
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+
+        function goToPage(pageUrl) {
+            window.location.href = pageUrl;
+        }
+    </script>
+</body>
+</html>

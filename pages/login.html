@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & signup</title>
+    <link rel="stylesheet" type="text/css" href="../styles/login.css">
+</head>
+<body>
+    
+    <section class="wrapper">
+        <div class="form signup">
+            <header>Signup</header>
+            <form action="#">
+                <input type="text" placeholder="Full name" required/>
+                <input type="email" placeholder="Email" required/>
+                <input type="password" placeholder="Password" required/>
+                <div class="checkbox">
+                    <input type="checkbox"/>
+                    <label for="">I accept all terms & conditions</label>
+                </div>
+                <input type="submit" value="signup" onclick="navigateToSocial()" />
+            </form>
+        </div>
+
+
+        <div class="form login">
+            <header>Login</header>
+            <form action="#">
+                <input type="email" placeholder="Email" required/>
+                <input type="password" placeholder="Password" required/>
+                <a href="#">Forgot Password?</a>
+                <input type="submit" value="login" onclick="navigateToSocial()"/>
+            </form>
+        </div>
+    </section>
+    <div class="rotated-title">
+        Connect. Communicate. Commit.
+    </div>
+
+    <p id="last-phrase">Join Us Now !</p>
+    
+
+    <script>
+        const wrapper = document.querySelector(".wrapper"),
+            signupHeader = document.querySelector(".signup header"),
+            loginHeader = document.querySelector(".login header");
+
+        loginHeader.addEventListener("click", () => {
+            wrapper.classList.add("active");
+        })
+
+        signupHeader.addEventListener("click", () => {
+            wrapper.classList.remove("active");
+        })
+
+        function navigateToSocial() {
+            window.location.href = "socialform.html"; // Replace with the actual path to your signup page
+        }
+
+    </script>
+</body>
+</html>
