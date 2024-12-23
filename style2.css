@@ -1,0 +1,370 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Background */
+.background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(120deg, #f5c6a5, #edb89a);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Container Styling */
+.container {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    max-width: 1200px;
+    height: 500px;
+    width: 95%;
+}
+
+/* Content Styling */
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.text {
+    max-width: 50%;
+    position: relative;
+    left: 80px;
+    text-align: center;
+}
+
+.text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.get-started {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background: linear-gradient(90deg, #f78f68, #f5c6a5);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.get-started:hover {
+    background: linear-gradient(90deg, #f5c6a5, #f78f68);
+    transform: scale(1.05);
+}
+
+/* Image Section */
+.image-container {
+    position: relative;
+    
+    max-width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image {
+    width: 95%;
+    max-width: 350px;
+    border-radius: 15px;
+    z-index: 0;
+}
+
+.decorative-div {
+    position: relative;
+    right: 150px;
+    border-radius: 20px;
+    width: 300px;
+    height: 400px;
+    /*background: linear-gradient(120deg, #f78f68, #edb89a);*/
+    z-index: 0;
+}
+
+/* Form Section */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+    position: relative;
+    max-width: 50%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 1rem;
+    color: #555;
+}
+
+input, select, button {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #f78f68;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #edb89a;
+}
+
+/* Switch Button */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+    margin-bottom: 15px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #f78f68;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* General Styles */
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f9;
+    overflow: hidden;
+}
+
+
+
+/* Modal Styles */
+.modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.form-container {
+    background: linear-gradient(135deg, #ffffff, #e8f5e9);
+    padding: 40px 50px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: left;
+}
+
+.form-container h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Modernized Input Styles */
+.form-fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.form-fields label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-fields input,
+.form-fields textarea,
+.form-fields select {
+    width: 100%;
+    max-width: 360px;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-fields textarea {
+    height: 80px;
+}
+
+.form-fields input:focus,
+.form-fields textarea:focus,
+.form-fields select:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 8px rgba(40, 167, 69, 0.4);
+}
+
+/* Button Styles */
+/* Button Styles */
+.form-buttons {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    gap: 10px; /* Add spacing between buttons */
+    margin-top: 20px; /* Add some space above buttons */
+}
+
+button {
+    flex: 0; /* Prevent buttons from stretching */
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.close-button {
+    background-color: #dc3545;
+}
+
+.close-button:hover {
+    background-color: #c82333;
+}
+
+
+
+/* Switch Styles */
+.form-switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #28a745;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+#mode-label {
+    margin-left: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+
+
+

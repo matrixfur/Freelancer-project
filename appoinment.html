@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion-Focused Therapy</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="background">
+        <div class="container">
+            <div class="content">
+                <div class="text">
+                    <h1>Emotion-Focused Therapy</h1>
+                    <p>Book a free counseling session now!</p>
+                    <button class="get-started" onclick="toggleForm()">Book Counseling</button>
+                </div>
+                <div class="image-container">
+                    <div class="decorative-div"></div>
+                    <img src="./resources/coun.png" alt="Counseling Image" class="image">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-background" id="modal-background" style="display: none;">
+        <div class="form-container" id="form-container">
+            <h2>Book a Free Consultation</h2>
+            <div class="form-switch">
+                <label class="switch">
+                    <input type="checkbox" id="toggle-mode" onchange="switchMode()">
+                    <span class="slider round"></span>
+                </label>
+                <span id="mode-label">Online</span>
+            </div>
+            <form id="counseling-form">
+                <div class="form-fields" id="online-fields">
+                    <input type="text" placeholder="Caregiver Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="tel" placeholder="Phone" required>
+                    <input type="text" placeholder="Patient's Name" required>
+                    <input type="number" placeholder="Patient's Age" required>
+                    <textarea placeholder="Primary concern"></textarea>
+                    <textarea placeholder="Additional message"></textarea>
+                </div>
+                <div class="form-fields" id="offline-fields" style="display: none;">
+                    <input type="text" placeholder="Caregiver Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="tel" placeholder="Phone" required>
+                    <input type="text" placeholder="Patient's Name" required>
+                    <input type="number" placeholder="Patient's Age" required>
+                    <textarea placeholder="Primary concern"></textarea>
+                    <input type="text" placeholder="Location" required>
+                    <select required>
+                        <option value="whatsapp">WhatsApp</option>
+                        <option value="email">Email</option>
+                        <option value="sms">SMS</option>
+                    </select>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit">Submit</button>
+                    <button type="button" class="close-button" onclick="toggleForm()">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

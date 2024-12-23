@@ -1,0 +1,115 @@
+/* Background gradient for the page */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg, #f5c6a5, #edb89a);
+    color: #3d2c2c;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Main container styling */
+.container {
+    max-width: 1200px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Title styling */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #3d2c2c;
+}
+
+/* Chart container */
+.chart-container {
+    width: 80%;
+    margin: 0 auto 40px;
+}
+
+/* Info container */
+.info-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Info box styling */
+.info-box {
+    flex: 1 1 calc(25% - 20px);
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    min-width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading in info boxes */
+.info-box h2 {
+    font-size: 2rem;
+    margin: 10px 0;
+    color: #ffffff;
+}
+
+/* Paragraphs in info boxes */
+.info-box p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #ffffff;
+}
+
+/* Icon styling */
+.info-box .icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+/* Vibrant colors for boxes */
+.info-box.vibrant-blue {
+    background-color: #547dde;
+}
+
+.info-box.vibrant-teal {
+    background-color: #3bbdc4;
+}
+
+.info-box.vibrant-orange {
+    background-color: #ff8c42;
+}
+
+.info-box.vibrant-purple {
+    background-color: #8c54ff;
+}
+
+/* Call-to-action styling */
+.call-to-action {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.call-to-action p {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #3d2c2c;
+}
+
+.cta-button {
+    background-color: #547dde;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #3bbdc4;
+}
